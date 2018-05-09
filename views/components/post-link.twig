@@ -1,0 +1,27 @@
+<div class="post-link">
+
+  {% if image %}
+    <div class="post-link__image gtw-col-1-3">
+      <a href="{{ link }}" title="link to {{ title }}">
+        <img src="{{ image }}" alt="thumbnail for {{ title }}">
+      </a>
+    </div>
+  {% else %}
+    <div class="gtw-col-1-3">
+      <div class="post-link__image__space">&nbsp;</div>
+    </div>
+  {% endif %}
+
+  <div class="post-link__text gtw-col-2-3">
+    <p class="post-link__text__date">{{ date }}</p>
+
+    <a class="post-link__text__title" href="{{ link }}" title="link to {{ title }}">
+      {{ title }}
+    </a>
+
+    {% if excerpt %}
+      <p class="post-link__text__excerpt">{{ excerpt }}</p>
+    {% endif %}
+  </div>
+
+</div>

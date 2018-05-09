@@ -1,0 +1,15 @@
+{% if post.get_field('show_callout') %}
+
+  <div class="callout callout--{{ post.get_field('callout_colour') }}">
+
+    {% if post.get_field('callout_text') %}
+      <p class="callout__text">{{ post.get_field('callout_text') }}</p>
+    {% endif %}
+
+    {% if post.get_field('callout_link') %}
+      <a class="button button--{{ post.get_field('callout_colour') }}" href="{{ post.get_field('callout_link') }}">{{ post.get_field('callout_link_text') }}</a>
+    {% endif %}
+
+  </div>
+
+{% endif %}

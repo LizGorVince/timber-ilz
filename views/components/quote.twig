@@ -1,0 +1,19 @@
+{% if post.get_field('show_quote') %}
+
+  <div class="quote quote--{{ post.get_field('quote_colour') }}">
+
+    <div class="quote__mark">
+      {{ source('/assets/img/quote-icon.svg') }}
+    </div>
+
+    {% if post.get_field('quote_text') %}
+      <p class="quote__text">{{ post.get_field('quote_text') }}</p>
+    {% endif %}
+
+    {% if post.get_field('quote_source') %}
+      <p class="quote__source">{{ post.get_field('quote_source') }}</p>
+    {% endif %}
+
+  </div>
+
+{% endif %}

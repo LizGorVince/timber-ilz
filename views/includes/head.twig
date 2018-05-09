@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<title>
+		{% if post.title %}
+			{{ site.title }} | {{ post.title }}
+		{% else %}
+			{{ site.title }}
+		{% endif %}
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="{{ page.description }}">
+	<!-- <link rel='shortcut icon' type='image/x-icon' href='{{ site.theme.link }}/favicon.ico' /> -->
+
+	{{ function('wp_head') }}
+
+</head>
+
+<body {{ function('body_class') }}>
+
+	<div id="page" class="site">

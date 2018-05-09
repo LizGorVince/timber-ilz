@@ -1,0 +1,28 @@
+<div class="banner-slider fade">
+
+  {% for slide in post.get_field('banner_slide') %}
+
+    <div class="banner-slider__slide">
+      <a href="{{ slide.banner_slide_link }}">
+
+        {% if slide.banner_slide_image %}
+          <img class="banner-slider__slide__img" src="{{ slide.banner_slide_image }}">
+        {% endif %}
+
+        {% if slide.banner_slide_title %}
+          <div class="banner-slider__slide__container">
+            <div class="container">
+              <div class="banner-slider__slide__excerpt">
+                <h2>{{ slide.banner_slide_title }}</h2>
+                <p>{{ slide.banner_slide_text }}</p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+      </a>
+    </div>
+
+  {% endfor %}
+
+</div>

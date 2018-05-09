@@ -1,0 +1,27 @@
+{% if post.get_field('show_cta') %}
+
+  {% if post.get_field('cta_colour') %}
+    <div class="cta" style="background-color: {{ post.get_field('cta_colour') }}">
+  {% else %}
+    <div class="cta">
+  {% endif %}
+
+    {% if post.get_field('cta_link') %}
+      <a href="{{ cta_link }}">
+    {% endif %}
+
+    {% if post.get_field('cta_title') %}
+      <h2 class="cta__title">{{ post.get_field('cta_title') }}</h2>
+    {% endif %}
+
+    {% if post.get_field('cta_text') %}
+      <p class="cta__text">{{ post.get_field('cta_text') }}</p>
+    {% endif %}
+
+    {% if post.get_field('cta_link') %}
+      </a>
+    {% endif %}
+
+  </div>
+
+{% endif %}

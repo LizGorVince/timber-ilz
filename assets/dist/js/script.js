@@ -1,0 +1,2 @@
+function exampleFunction(){console.log("DELETE ME...")}
+jQuery(document).ready(function(d){exampleFunction()}),$(window).on("load",function(){$("html").addClass("js--loaded"),$("body").removeClass("no-js").addClass("js--loaded")});

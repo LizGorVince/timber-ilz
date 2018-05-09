@@ -1,0 +1,26 @@
+.DS_Store
+!.gitignore
+!wp-content/
+!composer.json
+
+# Ignore everything in the "wp-content" directory, except all but default plugins and our main theme
+wp-content/*
+!wp-content/themes/
+
+wp-config.php
+wp-admin/*
+wp-includes/*
+
+# Ignore everything in the "themes" directory, except the themes you specify
+wp-content/themes/*
+!wp-content/themes/gv2017/
+
+!wp-content/plugins
+wp-content/themes/*/node_modules
+
+/vendor/
+.DS_Store
+
+/node_modules/
+
+package-lock.json
