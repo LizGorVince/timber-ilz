@@ -6,5 +6,53 @@
 .header {
   padding: 1em 0;
 
-  background-color: $nav-grey;
+  background-color: $nav-bg-grey;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+}
+
+.header__top__nav {
+  @include list-reset;
+  margin-left: auto;
+
+  li {
+    display: none;
+    @include list-item-reset;
+
+    &:last-of-type {
+      display: inline-block;
+    }
+
+    @include respond-min($bp-tablet-wide-min) {
+      margin-right: 1em;
+      display: inline-block;
+    }
+
+    a {
+      // @include fs-responsive($fs-top-nav);
+      font-weight: 400;
+      color: $nav-text-grey;
+      text-decoration: none;
+      font-family: $f-helvetica;
+      font-size: 14px;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: $clr-white;
+      }
+    }
+  }
+
+  // .border-link {
+  //   color: $clr-link;
+  //   @include standard-hover;
+  //
+  //   &:hover {
+  //     background: $clr-link;
+  //     color: $clr-white;
+  //   }
+  // }
 }

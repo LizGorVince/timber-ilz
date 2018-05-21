@@ -4,15 +4,23 @@
     <div class="header__top">
       <div class="header__logo">
         <a href="{{ site.url }}" title="{{ site.title }}">
-          <!-- {{ source('/assets/img/logo/logo.png') }} -->
-          <img src="/assets/img/logo/logo.png" />
+          <img src="{{ theme.path }}/assets/img/logo/logo.png" />
         </a>
       </div>
 
-      {% if top_nav %}
+      {% if main_nav %}
         <ul class="header__top__nav">
-          {% for item in top_nav.get_items %}
-            <li><a class="{{ item.class }}" href="{{ item.link }}">{{ item.title }}</a></li>
+          {% for item in main_nav.get_items %}
+          <li>
+            <a href="{{ item.link }}">{{ item.title }}</a>
+            {% if item.get_children %}
+              <ul class="header__bottom__nav__submenu">
+                {% for child in item.get_children %}
+                  <li><a href="{{ child.link }}">{{ child.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
           {% endfor %}
         </ul>
       {% endif %}
@@ -22,25 +30,6 @@
         <span></span>
         <span></span>
       </a>
-    </div>
-
-    <div class="header__bottom">
-      {% if main_nav %}
-        <ul class="header__bottom__nav">
-          {% for item in main_nav.get_items %}
-            <li>
-              <a href="{{ item.link }}"><span>{{ item.title }}</span></a>
-              {% if item.get_children %}
-                <ul class="header__bottom__nav__submenu">
-                  {% for child in item.get_children %}
-                    <li><a href="{{ child.link }}">{{ child.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
     </div>
 
   </div>
