@@ -16,6 +16,37 @@
         </ul>
       {% endif %}
 
+      <a class="header__top__menu" data-toggle="mobile" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+    <div class="header__bottom">
+      {% if main_nav %}
+        <ul class="header__bottom__nav">
+          {% for item in main_nav.get_items %}
+            <li>
+              <a href="{{ item.link }}"><span>{{ item.title }}</span></a>
+              {% if item.get_children %}
+                <ul class="header__bottom__nav__submenu">
+                  {% for child in item.get_children %}
+                    <li><a href="{{ child.link }}">{{ child.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+  </div>
+</header>
+
+<div class="wrapper">
+
   </div>
 </header>
 
