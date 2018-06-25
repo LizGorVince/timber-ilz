@@ -4,5 +4,146 @@
 */
 
 .footer {
+  background-color: $nav-bg-grey;
+  color: $clr-white;
+  padding: 1em 0;
+  // font-weight: $fw-regular;
 
+  @include respond-min($bp-tablet-wide-min) {
+    padding: 1.5em 0;
+  }
+
+  a,
+  a:link {
+    color: $nav-text-grey;
+    text-decoration: none;
+    font-family: $f-helvetica;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  a:hover {
+    color: $clr-white;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.footer__menu {
+  margin-bottom: 1em;
+
+  @include respond-min($bp-tablet-wide-min) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-right: 1px solid rgba($clr-white, 0.25);
+    margin-bottom: 0;
+  }
+}
+
+.footer__menu__helpful-links {
+  @include fs-responsive($fs-content-p);
+  width: 100%;
+
+  ul {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    li {
+      @include list-item-reset;
+      width: 50%;
+
+      a {
+        padding: 0.25em 0;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.footer__social {
+  margin-bottom: 1em;
+
+  @include respond-min($bp-tablet-wide-min) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0;
+  }
+}
+
+.footer__social__connect {
+  @include respond-min($bp-tablet-wide-min) {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+  }
+
+  p a:hover,
+  p a:focus{
+    box-shadow: none;
+    // font-weight: $fw-regular;
+
+    @include respond-min($bp-tablet-wide-min) {
+      margin-right: 0.5em;
+    }
+  }
+
+  a {
+    @include fs-responsive($fs-content-p);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    float: left;
+
+    @include respond-min($bp-tablet-wide-min) {
+      width: auto;
+      float: none;
+    }
+  }
+}
+
+.footer__social__connect__icon {
+  margin-right: 1em;
+
+  .fa {
+    font-size: 2em;
+
+    @include respond-min($bp-tablet-wide-min) {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.footer__copyright {
+  position: relative;
+  width: 100%;
+
+  @include respond-min($bp-tablet-wide-min) {
+    padding-top: 1.5em;
+  }
+
+  @include respond-min($bp-desktop-min) {
+    padding-top: 2em;
+  }
+
+  a,
+  a:link{
+    color: $clr-white;
+    box-shadow: none;
+    margin-left: 0.5em;
+  }
+
+  a:hover,
+  a:active {
+    box-shadow: none;
+  }
+
+  p {
+    margin-bottom: 0;
+    // font-weight: $fw-regular;
+    // @include fs-responsive($fs-small-p);
+  }
 }

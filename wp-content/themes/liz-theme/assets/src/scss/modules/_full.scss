@@ -1,0 +1,137 @@
+/*
+  FULL
+  Full screen hero, optional slider
+*/
+
+// Responsive font sizes
+$fs-full-h1: ( g : 32, gw : 36, gt : 42, gtw : 42, gd : 48, gdm : 48 );
+
+.full {
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include clearfix;
+
+  h1 {
+    @include fs-responsive($fs-full-h1);
+    color: $clr-white;
+
+    @include respond-min($bp-desktop-min) {
+      max-width: 10em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.full__slider {
+  height: 100%;
+  width: 100%;
+
+  .slick-list {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+  }
+
+  .slick-slide {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.full__inner {
+  @include z-index(modal-mid);
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0; right: 0;
+  padding: 0 2em;
+  text-align: center;
+
+  @include respond-min($bp-tablet-min) {
+    padding: 0 4em;
+  }
+
+  @include respond-min($bp-tablet-wide-min) {
+    padding: 0 12em;
+  }
+
+  .button{
+    width: 100%;
+    margin-bottom: 1.5em;
+
+    @include respond-min($bp-tablet-wide-min) {
+      width: inherit;
+      min-width: 200px;
+      margin: 0 0.5em;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.full__bottom {
+  @include z-index(modal-mid);
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  text-align: center;
+}
+
+.full__down {
+  color: $clr-white;
+  display: inline-block;
+  padding: 1.5em 0;
+
+  &:hover {
+    .icon {
+      top: 4px;
+    }
+  }
+
+  @include respond-min($bp-tablet-wide-min) {
+    padding: 3em 0;
+  }
+
+  .icon {
+    height: 3em;
+    width: 3em;
+    position: relative;
+    top: 0;
+    transition: all .3s $default-bezier;
+
+    @include respond-min($bp-tablet-wide-min) {
+      height: 4em;
+      width: 4em;
+    }
+
+    &:after {
+      @include fs-static(36);
+
+      @include respond-min($bp-tablet-wide-min) {
+        @include fs-static(48);
+      }
+    }
+  }
+}
