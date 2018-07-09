@@ -3,14 +3,11 @@
 {% block content %}
 
 <div class="content">
-  <div class="container">
-
-    this is my main content
-
-    this is an example of how to bring in twig files
-    <!-- {% include "includes/full.twig" %} -->
-
-  </div>
+    {% include "includes/hero.twig" %}
+    {% include "includes/projects.twig" %}
+    {% include "includes/skills.twig" %}
+    {% include "includes/codepen.twig" %}
+    {% include "includes/contact.twig" %}
 </div>
 
 {% endblock %}

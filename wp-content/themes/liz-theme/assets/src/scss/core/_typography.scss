@@ -86,15 +86,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   word-wrap: break-word;
   -webkit-text-size-adjust: 100%; // Prevents iOS orientation font resize bug
+  font-family: $f-josefin;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: 0 0 1em 0;
+  font-family: $f-arvo;
 }
 
 h1, .fs-h1 {
   @include fs-responsive($fs-h1);
+  // @include fs-static(30); //if you want a static size instead of responsive
 }
 
 h2, .fs-h2 {

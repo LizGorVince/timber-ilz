@@ -195,6 +195,10 @@ $grid-columns: full 1, 1-2 1/2 !default;
       left: -(floor($proportion));
     }
   }
+
+  .#{$prefix}-text-center {
+    text-align: center;
+  }
 }
 
 // set the proportions you want to use
