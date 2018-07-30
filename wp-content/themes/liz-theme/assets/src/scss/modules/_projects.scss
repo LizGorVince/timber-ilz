@@ -1,3 +1,11 @@
 .projects {
-  background-color: $clr-pink;
+  padding: 5% 0%;
+}
+
+.projects a {
+  color: $clr-black;
+}
+
+.projects img {
+  border: 1px solid $border-grey;
 }

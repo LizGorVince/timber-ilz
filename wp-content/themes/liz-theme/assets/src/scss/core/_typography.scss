@@ -159,3 +159,14 @@ ol, ul {
     padding: 0.5em 0.75em;
   }
 }
+
+a {
+}
+
+a:link {
+  color: $link-pink;
+}
+
+a:hover {
+  text-decoration: none;
+}

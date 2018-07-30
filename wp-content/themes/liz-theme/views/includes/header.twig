@@ -1,13 +1,11 @@
 <header class="header">
   <div class="container">
-
     <div class="header__top">
       <div class="header__logo">
         <a href="{{ site.url }}" title="{{ site.title }}">
           <img src="{{ theme.path }}/assets/img/logo/logo.png" />
         </a>
       </div>
-
       {% if main_nav %}
         <ul class="header__top__nav">
           {% for item in main_nav.get_items %}
@@ -24,20 +22,11 @@
           {% endfor %}
         </ul>
       {% endif %}
-
       <a class="header__top__menu" data-toggle="mobile" href="#">
         <span></span>
         <span></span>
         <span></span>
       </a>
     </div>
-
   </div>
 </header>
-
-<div class="wrapper">
-
-  </div>
-</header>
-
-<div class="wrapper">
