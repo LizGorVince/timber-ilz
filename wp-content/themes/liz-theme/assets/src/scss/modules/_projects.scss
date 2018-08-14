@@ -8,4 +8,12 @@
 
 .projects img {
   border: 1px solid $border-grey;
+  margin: 20px auto;
 }
+
+.projects p {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+//make all divs same min-height or flexbox

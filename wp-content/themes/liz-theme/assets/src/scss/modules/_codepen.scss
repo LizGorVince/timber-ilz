@@ -1,8 +1,20 @@
 .codepen {
   padding: 5% 0%;
-  background: $clr-green;
+  background-image: url("/wp-content/themes/liz-theme/assets/img/codepen/codepen-bg.png");
+  // background-image: "{{asset('assets/img/codepen/' ~ codepen-bg.png)}}";
 }
 
 .codepen a {
-  color: $clr-black;
+  color: $clr-white;
+  text-decoration: none;
+}
+
+.codepen__bg {
+  background: $clr-black;
+  padding: 20px;
+}
+
+.codepen__bg p {
+  color: $clr-white;
+  font-size: 16px;
 }

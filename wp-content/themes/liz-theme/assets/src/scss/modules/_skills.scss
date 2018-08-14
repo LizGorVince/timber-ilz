@@ -1,8 +1,16 @@
 .skills {
   padding: 5% 0%;
-  background-color: $clr-orange;
+  background: $clr-dk-gr-str;
+  background-image: repeating-linear-gradient(110deg, transparent, transparent 35px, rgba(255,255,255,.02) 35px, rgba(255,255,255,.02) 70px);
+  color: $clr-white;
+  text-align: center;
 }
 
 .skills a {
   color: $clr-black;
+}
+
+.skills p {
+  font-size: 16px;
+  font-weight: 200;
 }
