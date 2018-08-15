@@ -19,6 +19,30 @@
             "endpoint": 0
         },
         {
+            "key": "field_5b744c9fda2ed",
+            "label": "Profile pic",
+            "name": "hero_profile_pic",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5b7427584b808",
             "label": "Title",
             "name": "hero_title",
@@ -93,5 +117,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1534340033
+    "modified": 1534348523
 }

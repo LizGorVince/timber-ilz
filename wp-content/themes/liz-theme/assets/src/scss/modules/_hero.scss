@@ -6,6 +6,38 @@
   padding: 5% 0%;
 }
 
-.hero__col {
+.hero p {
+  font-size: 16px;
+  font-weight: 200;
+}
 
+.hero p.lead {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.hero a:hover {
+  background-color: $link-pink;
+  text-decoration: none;
+  color: $clr-white;
+}
+
+.hero .btn:link {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+  background-color: $link-pink;
+  border-color: $link-pink-border;
+  color: $clr-white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $link-pink-border;
+    border-color: $link-pink;
+  }
+
+  &:active, &:visited {
+    color: $link-pink;
+  }
 }

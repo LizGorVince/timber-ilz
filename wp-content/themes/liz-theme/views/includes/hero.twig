@@ -6,15 +6,15 @@
       <!-- above is a wrapper like row in Bootstrap, to make columns work (eg g-wrap--flex)-->
 
 			<div class="hero__col">
-			   <img src="liz-profile.jpg" alt="Liz Verde, Junior Web Developer" class="logo">
+			   <img src="{{ post.hero_profile_pic }}" alt="Liz Verde, Junior Web Developer" class="logo">
       </div><!-- col -->
 
   		<div class="hero__col g-col gtw-col-1-2 gtw-push-1-2 g-text-center">
     		<h1>{{ post.hero_title }}</h1>
-          <p> {{ post.hero_lead_para }} </p>
+          <p class="lead"> {{ post.hero_lead_para }} </p>
           <p> {{ post.hero_para }}</p>
+					<p><a href="#about" class="btn" role="button">//Find out more »</a></p>
   		</div><!-- col -->
-
 		</div><!-- row -->
 
 	</div><!-- container -->
