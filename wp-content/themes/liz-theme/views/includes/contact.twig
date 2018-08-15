@@ -1,11 +1,10 @@
 <section class="contact g-text-center">
-	<h2>//Contact</h2>
-	<p class="lead">07813 791 655  • <span><a href="mailto:ljverde@gmail.com" class="text-links">ljverde@gmail.com</a></span></p>
+	<h2>{{ post.contact_title }}</h2>
+	<p class="lead">{{ post.contact_details }}</p>
   <div class="col-lg-12">
-  	<a href="https://github.com/lizagne" class="badge social github" target="_blank"><i class="fa fa-github"></i></a>
-  	<a href="https://codepen.io/lizagne" class="badge social codepen" target="_blank"><i class="fa fa-codepen"></i></a>
-  	<a href="https://instagram.com/ziz_draws_too" class="badge social instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-  	<a href="https://twitter.com/ziz_draws_too" class="badge social twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+  	<a href="{{ post.contact_github_link }}" class="badge social github" target="_blank"><i class="fa fa-github"></i></a>
+  	<a href="{{ post.contact_codepen_link }}" class="badge social codepen" target="_blank"><i class="fa fa-codepen"></i></a>
+  	<a href="{{ post.contact_insta_link }}" class="badge social instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+  	<a href="{{ post.contact_twitter_link }}" class="badge social twitter" target="_blank"><i class="fa fa-twitter"></i></a>
   </div><!-- end col -->
-
 </section>
