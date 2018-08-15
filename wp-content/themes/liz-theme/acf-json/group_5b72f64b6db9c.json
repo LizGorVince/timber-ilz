@@ -21,7 +21,7 @@
         {
             "key": "field_5b72f6b4e6f63",
             "label": "Title",
-            "name": "title",
+            "name": "skills_title",
             "type": "text",
             "instructions": "Type in the title of the section always starts with '\/\/'",
             "required": 1,
@@ -43,7 +43,7 @@
             "name": "skills_grid",
             "type": "repeater",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -53,15 +53,15 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "row",
             "button_label": "",
             "sub_fields": [
                 {
                     "key": "field_5b72f7c4b4b19",
                     "label": "Skills Sub-Title",
-                    "name": "skills_sub-title",
-                    "type": "textarea",
-                    "instructions": "Type in the heading for this section, will either be \/\/Learning, \/\/Intermediate or \/\/Courses. Always begins with '\/\/'",
+                    "name": "skills_sub_title",
+                    "type": "text",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -70,17 +70,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "placeholder": "\/\/Write the sub-title here",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5b72f7e8b4b1a",
                     "label": "Skill List",
-                    "name": "skill_list",
+                    "name": "skills_list",
                     "type": "textarea",
-                    "instructions": "This is a list of skills to be placed in, usually in groups of three. Always starts with '\/\/'",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -106,13 +106,13 @@
             }
         ]
     ],
-    "menu_order": 1,
-    "position": "normal",
-    "style": "seamless",
-    "label_placement": "left",
-    "instruction_placement": "label",
+    "menu_order": 2,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1534261720
+    "modified": 1534340234
 }

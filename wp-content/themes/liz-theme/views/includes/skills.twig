@@ -5,9 +5,14 @@
 				<h2>{{ post.skills_title }}</h2>
 			</div><!-- section-header -->
 
-			<div class="g-col g-text-center gt-col-1-3">				<!-- <i class="fa fa-html5" ></i> -->
-				<h3>{{ post.skills_sub_title }}</h3>
-				<p>{{ post.skills_list }}</p>
-			</div><!-- end col -->
+			{% if post.get_field('skills_grid')  %}
+		 		{% for skill in post.get_field('skills_grid') %}
+				<div class="g-col g-text-center gt-col-1-3">
+					<h3>{{ skill.skills_sub_title }}</h3>
+					<p>{{ skill.skills_list }}</p>
+				</div><!-- end col -->
+				{% endfor %}
+			{% endif %}
+		</div>
 	</div>
 </section>
