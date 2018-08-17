@@ -1,7 +1,7 @@
 //Styling for top panel
 
 .hero {
-  background-color: $clr-black;
+  background-image: url("/wp-content/themes/liz-theme/assets/img/hero/hero-bg.png");
   color: $clr-white;
   padding: 5% 0%;
 }
@@ -16,11 +16,17 @@
   font-weight: 500;
 }
 
+.hero a:visited, .hero a:active {
+  color: $link-pink;
+}
+
 .hero a:hover {
   background-color: $link-pink;
   text-decoration: none;
   color: $clr-white;
 }
+
+
 
 .hero .btn:link {
   padding: 10px 16px;
